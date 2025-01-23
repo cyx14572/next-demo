@@ -19,6 +19,7 @@ export async function generateMetadata({ params }: any) {
   }).toString()
 
   // const deepLink = `cmsvictor://?${deepLinkParams}`
+  // 写死
   const deepLink = `cmsvictor://?formType=2&amp;type=1001&amp;book_type=1&amp;parm1=661368cdf0edda7abe0a1c2d&amp;chapterId=i7e6ohlvz5&amp;af_deeplink=true&amp;af_dp=cmsvictor%3A%2F%2F%3FformType%3D2%26type%3D1001%26book_type%3D1%26parm1%3D661368cdf0edda7abe0a1c2d%26chapterId%3Di7e6ohlvz5&amp;af_generate_clk=true&amp;af_original_url=https%3A%2F%2Frealshortapp.onelink.me%2FZof7%3Faf_xp%3Dcustom%26pid%3Dtest%26c%3DCMS_APP_EXCHANGE_REELSHORT%26deep_link_value%3Dcmsvictor%253A%252F%252F%253FformType%253D2%2526type%253D1001%2526book_type%253D1%2526parm1%253D661368cdf0edda7abe0a1c2d%2526chapterId%253Di7e6ohlvz5%26af_dp%3Dcmsvictor%253A%252F%252F%253FformType%253D2%2526type%253D1001%2526book_type%253D1%2526parm1%253D661368cdf0edda7abe0a1c2d%2526chapterId%253Di7e6ohlvz5&amp;af_xp=custom&amp;c=CMS_APP_EXCHANGE_REELSHORT&amp;campaign=CMS_APP_EXCHANGE_REELSHORT&amp;deep_link_value=cmsvictor%3A%2F%2F%3FformType%3D2%26type%3D1001%26book_type%3D1%26parm1%3D661368cdf0edda7abe0a1c2d%26chapterId%3Di7e6ohlvz5&amp;media_source=test&amp;pid=test`
   return {
     title: id,
