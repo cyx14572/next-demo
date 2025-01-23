@@ -1,5 +1,42 @@
 import Image from 'next/image'
 
+export async function generateMetadata({ params }: any) {
+  console.log(
+    '%c [ params ]-4',
+    'font-size:13px; background:pink; color:#bf2c9f;',
+    params
+  )
+  const [, id, data] = params.id
+
+  // 构建深度链接URL
+  const deepLinkParams = new URLSearchParams({
+    fromType: '4',
+    type: '1001',
+    parm1: id,
+    book_type: '1',
+    chapterId: data,
+    ad_type: '',
+  }).toString()
+
+  const deepLink = `cmsvictor://?${deepLinkParams}`
+
+  return {
+    title: id,
+    description: data,
+    other: {
+      // iOS App Links
+      'al:ios:url': deepLink,
+      'al:ios:app_store_id': '1636235979',
+      'al:ios:app_name': 'RealShort',
+
+      // Android App Links
+      'al:android:url': deepLink,
+      'al:android:package': 'com.newleaf.app.android.victor',
+      'al:android:app_name': 'RealShort',
+    },
+  }
+}
+
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
